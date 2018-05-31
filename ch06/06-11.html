@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <title>06-11</title>
-  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+    <meta charset="utf-8">
+    <title>06-11</title>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
 </head>
 <template id='timeTemplate'>
     <div>
@@ -12,19 +13,20 @@
     </div>
 </template>
 <script type="text/javascript">
-var data = { nowTS : 0 };
-Vue.component('time-component', {
-    template : '#timeTemplate',
-    data : function() {
-        return data;
-    },
-    methods : {
-        timeClick : function(e) {
-            this.nowTS = (new Date()).getTime();
+    var data = { nowTS: 0 };
+    Vue.component('time-component', {
+        template: '#timeTemplate',
+        data: function () {
+            return data;
+        },
+        methods: {
+            timeClick: function (e) {
+                this.nowTS = (new Date()).getTime();
+            }
         }
-    }
-})
+    })
 </script>
+
 <body>
     <div id="app">
         <time-component></time-component>
@@ -32,9 +34,10 @@ Vue.component('time-component', {
     </div>
 </body>
 <script type="text/javascript">
-Vue.config.devtools = true;
-var v = new Vue({
-    el : '#app'
-})
+    Vue.config.devtools = true;
+    var v = new Vue({
+        el: '#app'
+    })
 </script>
+
 </html>
