@@ -1,4 +1,4 @@
-let msg = "GLOBAL";
+const msg = "GLOBAL";
 function outer(a) {
     let msg = "OUTER";
     console.log(msg);
@@ -7,3 +7,7 @@ function outer(a) {
         console.log(msg);
     }
 }
+
+
+outer();
+console.log(msg);
